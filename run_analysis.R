@@ -68,6 +68,9 @@ Result <- (group_by(dataset, subject, activity) %>% summarise_each(funs(mean)) %
 #export result as txt-file
 write.table(Result, "result.txt", row.name = FALSE)
 
+#Post-processing: After creating the result.txt file, in Notepad++ (using CTRL+h) change the column names 
+#so that they don't contain special characters like '(', ')', '-'
+#e.g.  'tBodyAcc-mean()-X' becomes  'tBodyAcc_mean_X' 
 
 ## To import the dataset to R:
 # read <- read.table("result.txt", header = T)

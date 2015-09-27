@@ -44,8 +44,8 @@ colnames(complete) <- c("subject", "activity", feat)
 colnames(complete)
 
 ## 3. Extract only the measurements on the mean and standard deviation for each measurement.
-#The script only extracts the features which names contain extensions "-mean()" or "-std()", as stated in "features_info.txt"
-#It does not extract columns like  fBodyBodyGyroJerkMag-meanFreq() or angle(tBodyAccJerkMean),gravityMean) which also contain "means" but not the means we are interested in.   
+#The script only extracts the features which names contain extensions "-mean()" or "-std()" or "meanFreq()", as stated in "features_info.txt"
+#It does not extract columns like  angle(tBodyAccJerkMean),gravityMean) which also contain "means" but not the means we are interested in.   
 
 meancols <- grep("-mean()",colnames(complete))
 stdcols <- grep("-std()", colnames(complete))

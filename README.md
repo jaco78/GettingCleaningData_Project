@@ -32,10 +32,11 @@ The script:
 6. Writes the latter dataset as a text file "result.txt" to your working directory.
 See 'run_analysis.R' for more details
 
+Post-processing: After creating the result.txt file, in Notepad++ I changed the column names so that they wouldn't contain special characters like (, ), - e.g.  'tBodyAcc-mean()-X' becomes  'tBodyAcc_mean_X' (using CTRL+h)
 
 The resulting dataset can be read into R using the commands:
 read <- read.table("result.txt", header = T)
 View(read)
 
 
-3. The CodeBook contains 
+3. The CodeBook describes each variable and it's value in the tidy dataset 'result.txt' 
